@@ -1,0 +1,129 @@
+:root.light {
+    --bg-color: #ffffff;
+    --text-color: #121212;
+    --navbar-bg-color: #0dcaf0;
+    --footer-bg-color: #0dcaf0;
+    /* צבע זהה ל־navbar במצב בהיר */
+    --link-color: #ffffff;
+    --button-bg: #e2e8f0;
+}
+
+:root.dark {
+    --bg-color: #202125;
+    --text-color: #f5f5f5;
+    --navbar-bg-color: #292A2E;
+    --footer-bg-color: #292A2E;
+    --input-bg-color: #2c2c2c;
+    /* צבע זהה ל־navbar במצב כהה */
+    --link-color: #f5f5f5;
+    --button-bg: #374151;
+}
+
+:root.dark input {
+    background-color: var(--input-bg-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid #444 !important;
+}
+
+:root.dark .fa-solid {
+    color: white;
+}
+
+:root.dark .btn {
+    color: white;
+}
+
+:root.dark .btn-outline-success {
+    border-color: #198754;
+    color: #198754;
+}
+
+:root.dark .btn-outline-success {
+    color: #198754 !important;
+    border-color: #198754 !important;
+    background-color: transparent !important;
+}
+
+:root.dark .btn-outline-success .fa-thumbs-up {
+    color: #198754 !important;
+}
+
+:root.dark .btn-outline-info {
+    color: #0dcaf0 !important;
+    border-color: #0dcaf0 !important;
+    background-color: transparent !important;
+}
+
+:root.dark .btn-outline-info .fa-phone {
+    color: #0dcaf0 !important;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--navbar-bg-color) !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: var(--link-color) !important;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 כרטיסים בשורה */
+    gap: 1.5rem;
+    /* ריווח בין הכרטיסים */
+    justify-content: center;
+}
+
+.card {
+    height: 100%;
+}
+
+/* התאמות למסכים קטנים */
+@media (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 כרטיסים בשורה */
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 כרטיסים בשורה */
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-grid {
+        grid-template-columns: repeat(1, 1fr);
+        /* כרטיס אחד בשורה */
+    }
+}
+
+.footer {
+    background-color: var(--footer-bg-color) !important;
+    /* עכשיו תואם את navbar */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
