@@ -6,7 +6,7 @@ interface AboutProps {
 
 const About: FunctionComponent<AboutProps> = () => {
     return (
-        <div className="container my-3 w-50">
+        <div className="container my-3 w-50" >
             <div className="card shadow-lg">
                 <div className="card-body m-4">
                     <h1 className="card-title text-center mb-4 fs-2 fw-bold text-justify">About</h1>
@@ -36,7 +36,7 @@ const About: FunctionComponent<AboutProps> = () => {
                     </ul>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
