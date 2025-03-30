@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+# BCARD - מערכת לכרטיסי ביקור דיגיטליים
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BCARD היא אפליקציית רשת לבניית וניהול כרטיסי ביקור דיגיטליים, המיועדת לעסקים קטנים, פרילנסרים ומשתמשים פרטיים.  
+האפליקציה מאפשרת ליצור, לערוך, למחוק ולצפות בכרטיסי ביקור – עם אפשרות למשתמשים עסקיים בלבד.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 טכנולוגיות
 
-## Expanding the ESLint configuration
+- **React** (עם TypeScript)
+- **Vite** – לבניית הפרויקט והרצה מהירה
+- **Formik + Yup** – לניהול טפסים ואימות נתונים
+- **Leaflet + Nominatim API** – להצגת מיקום על מפה לפי כתובת
+- **Toastify** – להצגת הודעות הצלחה/שגיאה
+- **Context API** – לניהול מצב משתמשים ולייקים
+- **JWT Auth** – לניהול הרשאות וגישה
+- **ESLint + Prettier** – לאיכות קוד
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🧩 פיצ'רים עיקריים
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- 📇 יצירת כרטיס ביקור עם פרטים כמו: שם עסק, תיאור, טלפון, אימייל, כתובת ותמונה
+- 🌐 הצגת מיקום הכרטיס על מפה לפי הכתובת (באמצעות Leaflet)
+- ❤️ אפשרות ללייקים (רק למשתמשים עסקיים)
+- 👤 הרשאות מבוססות משתמש:
+  - משתמש רגיל: יכול לצפות בכרטיסים
+  - משתמש עסקי: יכול ליצור ולנהל כרטיסים
+  - משתמש לא מחובר: מוגבל בגישה
+- 🧠 שמירה של הלייקים גם אחרי רענון הדף
+- ✏️ עריכת ומחיקת כרטיסים – רק על ידי היוצר שלהם
+- 🔒 ניהול גישה לפי JWT Token
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+
+
